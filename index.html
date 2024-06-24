@@ -7,15 +7,56 @@
 <meta name="robots" content="max-image-preview:large">
 <title>Initiatar of Change</title>
 <style>
-	.container {
-    margin-left: 200px;
-    padding: 20px;
-    border: 2px solid #4CAF50; /* Green border */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light grey background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a 3D effect */
-}
-</style>
+    .container4 {
+      width: 600px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container4 img {
+      width: 100px;
+      margin-bottom: -40px
+    }
+
+    .container4 h2 {
+      margin-bottom: 20px;
+    }
+
+    .container4 label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .container4 input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .container4 button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .container4 button:hover {
+      background-color: #218838;
+    }
+
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+ <link rel="icon" href="images/logo.png" type="image/x-icon">
 <link rel="alternate" type="application/rss+xml" title="Initiators of Change » Feed" href="https://initiatorsofchange.com/feed/">
 <link rel="alternate" type="application/rss+xml" title="Initiators of Change » Comments Feed" href="https://initiatorsofchange.com/comments/feed/">
 <script>
@@ -395,58 +436,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				</div>
 					</div>
 		</div>
-				
-	
-				
-			
-					
-		
-			<div class="container">
-				<h2>Verify Certificates</h2>
-				<form id="certificateForm">
-					<label for="certificateId">Certificate ID:</label>
-					<input type="text" id="certificateId" name="certificateId" required>
-					<button type="submit">Submit</button>
-				</form>
-				<div class="result" id="result"></div>
-			</div>
-			<script>
-				document.getElementById('certificateForm').addEventListener('submit', function(e) {
-					e.preventDefault();
-					const certificateId = document.getElementById('certificateId').value;
-		
-					// Simulating fetching data from a server
-					const certificates = {
-						'12345': {
-							name: 'Kashish Sharma',
-							startDate: '2024-14-06',
-							endDate: '2024-20-06',
-							activities: 'Teaching, Organizing Events'
-						},
-						'67890': {
-							name: 'Jane Smith',
-							startDate: '2023-02-01',
-							endDate: '2023-11-30',
-							activities: 'Fundraising, Community Service'
-						}
-					};
-		
-					const certificate = certificates[certificateId];
-					const resultDiv = document.getElementById('result');
-		
-					if (certificate) {
-						resultDiv.innerHTML = `
-							<p>NGO Volunteer Name: ${certificate.name}</p>
-							<p>Start Date: ${certificate.startDate}</p>
-							<p>End Date: ${certificate.endDate}</p>
-							<p>Activities Performed: ${certificate.activities}</p>
-						`;
-					} else {
-						resultDiv.innerHTML = '<p>Certificate not found. Please check the ID and try again.</p>';
-					}
-				});
-			</script>
-		</center>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6ae7cc2" data-id="6ae7cc2" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-d3821bf elementor-widget elementor-widget-button" data-id="d3821bf" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Verify Certificates</span>
+		</span>
 					</a>
 		</div>
 				</div>
@@ -457,7 +455,56 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</section>
 							</div>
 				</header>
-
+            <div>
+				<div class="container4">
+					<img src="images/logo.png" alt="Logo">
+					<h2>Verify Certificates</h2>
+					<form id="certificateForm">
+					  <label for="certificateId">Certificate ID:</label>
+					  <input type="text" id="certificateId" name="certificateId" required>
+					  <button type="submit">Submit</button>
+					</form>
+					<div class="result" id="result"></div>
+				  </div>
+				  
+				  <script>
+					document.getElementById('certificateForm').addEventListener('submit', function(e) {
+					  e.preventDefault();
+					  const certificateId = document.getElementById('certificateId').value;
+				  
+					  // Simulating fetching data from a server
+					  const certificates = {
+						'12345': {
+						  name: 'Kashish Sharma',
+						  startDate: '2024-06-14',
+						  endDate: '2024-06-20',
+						  activities: 'Teaching, Organizing Events'
+						},
+						'67890': {
+						  name: 'Jane Smith',
+						  startDate: '2023-01-02',
+						  endDate: '2023-11-30',
+						  activities: 'Fundraising, Community Service'
+						}
+					  };
+				  
+					  const certificate = certificates[certificateId];
+					  const resultDiv = document.getElementById('result');
+				  
+					  if (certificate) {
+						resultDiv.innerHTML = `
+						  <p>NGO Volunteer Name: ${certificate.name}</p>
+						  <p>Start Date: ${certificate.startDate}</p>
+						  <p>End Date: ${certificate.endDate}</p>
+						  <p>Activities Performed: ${certificate.activities}</p>
+						`;
+					  } else {
+						resultDiv.innerHTML = '<p>Certificate not found. Please check the ID and try again.</p>';
+					  }
+					});
+				  </script>
+				  
+			</div>
 			<div data-elementor-type="wp-page" data-elementor-id="29" class="elementor elementor-29">
 									<section class="elementor-section elementor-top-section elementor-element elementor-element-4b017b8 elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="4b017b8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}"="">
 						<div class="elementor-container elementor-column-gap-default">
